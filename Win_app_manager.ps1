@@ -22,55 +22,55 @@ $AppList = @(
     # OS Enhancements
     # ==========================================
     @{ Type="Title"; Name="OS Enhancements" },
-    @{ Type="Winget"; Id="Eassos.DiskGenius"; Name="DiskGenius (Disk Recovery)" },
-    @{ Type="Winget"; Id="BleachBit.BleachBit"; Name="BleachBit (Disk Cleaner)" },
-    @{ Type="Winget"; Id="ClashVergeRev.ClashVergeRev"; Name="Clash Verge Rev (Proxy Client)" },
-    @{ Type="Winget"; Id="QL-Win.QuickLook"; Name="QuickLook (File Preview)" },
-    @{ Type="Winget"; Id="OliverSchwendener.ueli"; Name="Ueli (Launcher)" },
-    # @{ Type="Winget"; Id="9PFXXSHC64H3"; Name="Raycast (Launcher Beta)" },
+    @{ Type="Winget"; Id="Eassos.DiskGenius"; Name="DiskGenius"; Desc="Disk management and recovery tool." },
+    @{ Type="Winget"; Id="BleachBit.BleachBit"; Name="BleachBit"; Desc="Disk cleaning tool." },
+    @{ Type="Winget"; Id="ClashVergeRev.ClashVergeRev"; Name="Clash Verge Rev"; Desc="Proxy Client." },
+    @{ Type="Winget"; Id="QL-Win.QuickLook"; Name="QuickLook"; Desc="File preview by pressing spacebar, bringing macOS QuickLook functionality to Windows." },
+    @{ Type="Winget"; Id="OliverSchwendener.ueli"; Name="Ueli"; Desc="Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed." },
+    # @{ Type="Winget"; Id="9PFXXSHC64H3"; Name="Raycast"; Desc="Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed." },
 
     # ==========================================
     # File & Software Management
     # ==========================================
     @{ Type="Title"; Name="File & Software Management" },
-    @{ Type="Winget"; Id="GeekUninstaller.GeekUninstaller"; Name="Geek Uninstaller" },
-    @{ Type="Winget"; Id="Google.GoogleDrive"; Name="Google Drive" },
-    @{ Type="Manual"; Name="Resilio Sync"; Link="https://www.resilio.com/sync/"; Desc="P2P File Sync" },
-    @{ Type="Manual"; Name="Odrive sync"; Link="https://www.odrive.com/"; Desc="Unified Cloud Storage" },
-    @{ Type="Winget"; Id="7zip.7zip"; Name="7-Zip" },
-    @{ Type="Winget"; Id="TGRMNSoftware.BulkRenameUtility"; Name="Bulk Rename Utility" },
-    @{ Type="Winget"; Id="SoftDeluxe.FreeDownloadManager"; Name="Free Download Manager" },
-    @{ Type="Winget"; Id="IPFS.IPFS-Desktop"; Name="IPFS Desktop" },
+    @{ Type="Winget"; Id="GeekUninstaller.GeekUninstaller"; Name="Geek Uninstaller"; Desc="Uninstaller and cleanup tool." },
+    @{ Type="Winget"; Id="Google.GoogleDrive"; Name="Google Drive"; Desc="Cloud drive and sync tool." },
+    @{ Type="Manual"; Name="Resilio Sync"; Link="https://www.resilio.com/sync/"; Desc="P2P sync tool, no cloud storage." },
+    @{ Type="Manual"; Name="Odrive sync"; Link="https://www.odrive.com/"; Desc="Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions." },
+    @{ Type="Winget"; Id="7zip.7zip"; Name="7-Zip"; Desc="File compression and extraction tool." },
+    @{ Type="Winget"; Id="TGRMNSoftware.BulkRenameUtility"; Name="Bulk Rename Utility"; Desc="Powerful rename tool that can handle almost any batch renaming requirement." },
+    @{ Type="Winget"; Id="SoftDeluxe.FreeDownloadManager"; Name="Free Download Manager"; Desc="Download manager tool." },
+    @{ Type="Winget"; Id="IPFS.IPFS-Desktop"; Name="IPFS Desktop"; Desc="Decentralized storage." },
 
     # ==========================================
     # Daily Use
     # ==========================================
     @{ Type="Title"; Name="Daily Use" },
-    @{ Type="Winget"; Id="Google.Chrome.EXE"; Name="Google Chrome" },
-    @{ Type="Winget"; Id="Obsidian.Obsidian"; Name="Obsidian (Notes)" },
-    @{ Type="Winget"; Id="Xmind.Xmind"; Name="Xmind (Mind Map)" },
-    @{ Type="Manual"; Name="Kuaitie"; Link="https://kuaitie.cloud/"; Desc="Clipboard Sync" },
-    @{ Type="Winget"; Id="ShareX.ShareX"; Name="ShareX (Screen Capture)" },
-    @{ Type="Winget"; Id="Uzero.ScanScan"; Name="Baimiao (OCR Tool)" },
-    @{ Type="Winget"; Id="VideoLAN.VLC"; Name="VLC Media Player" },
-    @{ Type="Winget"; Id="calibre.calibre"; Name="Calibre (E-book)" },
-    @{ Type="Winget"; Id="EuSoft.Eudic"; Name="Eudic Dictionary" },
-    @{ Type="Winget"; Id="Tencent.WeChat"; Name="WeChat" },
-    @{ Type="Winget"; Id="Tencent.QQMusic"; Name="QQ Music" },
-    @{ Type="Winget"; Id="NetEase.CloudMusic"; Name="NetEase Cloud Music" },
+    @{ Type="Winget"; Id="Google.Chrome.EXE"; Name="Google Chrome"; Desc="Browser." },
+    @{ Type="Winget"; Id="Obsidian.Obsidian"; Name="Obsidian"; Desc="Notes and personal library." },
+    @{ Type="Manual"; Name="Kuaitie"; Link="https://kuaitie.cloud/"; Desc="Clipboard sync tool with mobile device support." },
+    @{ Type="Winget"; Id="ShareX.ShareX"; Name="ShareX"; Desc="Screenshot and screen recording tool with extensive shortcuts, supports scrolling capture, local highlighting, step annotation. Includes utilities: image stitching, splitting, adding borders to screenshots." },
+    @{ Type="Winget"; Id="Uzero.ScanScan"; Name="Baimiao"; Desc="Screenshot OCR tool with high accuracy for Chinese text recognition." },
+    @{ Type="Winget"; Id="VideoLAN.VLC"; Name="VLC Media Player"; Desc="Local multimedia player supporting a wide range of formats." },
+    @{ Type="Winget"; Id="calibre.calibre"; Name="Calibre"; Desc="E-book management tool." },
+    @{ Type="Winget"; Id="EuSoft.Eudic"; Name="Eudic Dictionary"; Desc="Dictionary software." },
+    @{ Type="Winget"; Id="Tencent.WeChat"; Name="WeChat"; Desc="Dominant Chinese IM." },
+    @{ Type="Winget"; Id="Tencent.QQMusic"; Name="QQ Music"; Desc="Rich music library." },
+    @{ Type="Winget"; Id="NetEase.CloudMusic"; Name="NetEase Cloud Music"; Desc="Supplementary music library." },
 
     # ==========================================
     # Production Tools
     # ==========================================
     @{ Type="Title"; Name="Production Tools" },
-    @{ Type="Winget"; Id="Microsoft.VisualStudioCode"; Name="VS Code" },
-    @{ Type="Manual"; Name="YingDao"; Link="https://www.yingdao.com/"; Desc="RPA Automation" },
-    @{ Type="Winget"; Id="Figma.Figma"; Name="Figma (UI Design)" },
-    @{ Type="Winget"; Id="GIMP.GIMP.3"; Name="GIMP 3.0 (Beta)" },
-    @{ Type="Winget"; Id="Inkscape.Inkscape"; Name="Inkscape (Vector Graphics)" },
-    @{ Type="Winget"; Id="SaeraSoft.CaesiumImageCompressor"; Name="Caesium (Image Compressor)" },
-    @{ Type="Manual"; Name="Collagelt"; Link="https://www.collageitfree.com/"; Desc="Photo Collage" },
-    @{ Type="Winget"; Id="HandBrake.HandBrake"; Name="HandBrake (Video Transcoder)" }
+    @{ Type="Winget"; Id="Microsoft.VisualStudioCode"; Name="VS Code"; Desc="Popular IDE." },
+    @{ Type="Manual"; Name="YingDao"; Link="https://www.yingdao.com/"; Desc="Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful." },
+    @{ Type="Winget"; Id="Xmind.Xmind"; Name="Xmind"; Desc="Mind Map." },
+    @{ Type="Winget"; Id="Figma.Figma"; Name="Figma"; Desc="UI Design." },
+    @{ Type="Winget"; Id="GIMP.GIMP.3"; Name="GIMP 3.0"; Desc="Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style." },
+    @{ Type="Winget"; Id="Inkscape.Inkscape"; Name="Inkscape"; Desc="Vector graphics tool, free alternative to Illustrator. Opens .ai files with good fidelity, sufficient for downloading assets and saving as images." },
+    @{ Type="Winget"; Id="SaeraSoft.CaesiumImageCompressor"; Name="Caesium"; Desc="Image compression tool." },
+    @{ Type="Manual"; Name="Collagelt"; Link="https://www.collageitfree.com/"; Desc="Collage tool for quickly creating photo walls and mood boards. Free version has watermark." },
+    @{ Type="Winget"; Id="HandBrake.HandBrake"; Name="HandBrake"; Desc="Large video compression for easy transfer. Also converts videos from other formats to MP4." }
 )
 
 # 4. Core Functions
