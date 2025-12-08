@@ -1,67 +1,61 @@
 #
-
 #
 # ----------------------------------------------------------
-# macOS 自动化部署清单 (Homebrew Bundle)
+# macOS Automated Deployment Checklist (Homebrew Bundle)
 # ----------------------------------------------------------
-# 使用方法:
-# 1. 打开终端 (Terminal)
-# 2. 安装 Homebrew (如果未安装):
+# Usage:
+# 1. Open Terminal
+# 2. Install Homebrew (if not already installed):
 #    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-# 3. 安装 Mac App Store 命令行工具:
+# 3. Install Mac App Store command line tool:
 #    brew install mas
-# 4. 进入此文件所在目录，运行:
+# 4. Navigate to this directory and run:
 #    brew bundle
 
 # ==========================================
-# ⚙️ 操作系统增强
+# ⚙️ OS Enhancements
 # ==========================================
-cask "bleachbit"        # BleachBit (磁盘清理)
-cask "clash-verge-rev"  # Clash Verge Rev (网络代理)
-cask "raycast"          # Raycast (效率神器)
-cask "dozer"            # Dozer (任务栏图标管理)
-cask "hyperswitch"      # Hyper Switch (任务切换工具)
+mas "Cleaner One Pro", id: 1133028347  # Disk cleaning tool.
+# manual "dozer", link: https://github.com/Mortennn/Dozer  # Menu bar icon management tool that hides infrequently used icons.
+# manual "hyperswitch", link: https://bahoom.com/hyperswitch  # Task switcher more flexible and accurate than macOS built-in switching.
+cask "raycast"  # Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed.
+cask "clash-verge-rev"  # Proxy Client.
 
 # ==========================================
-# 📁 软件&文件管理
+# 📁 File & Software Management
 # ==========================================
-cask "appcleaner"       # AppCleaner (卸载清理工具)
-cask "google-drive"     # Google Drive
-cask "resilio-sync"     # Resilio Sync
-cask "odrive"           # Odrive
-cask "the-unarchiver"   # The Unarchiver (解压工具)
-cask "free-download-manager" # Free Download Manager
-cask "ipfs"             # IPFS Desktop
+cask "appcleaner"  # Uninstaller and cleanup tool.
+cask "google-drive"  # Cloud drive and sync tool.
+cask "resilio-sync"  # P2P sync tool, no cloud storage.
+cask "odrive"  # Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions.
+cask "free-download-manager"  # Download manager tool.
 
 # ==========================================
-# 🌴 日常使用
+# 🌴 Daily Use
 # ==========================================
-cask "google-chrome"    # Google Chrome
-cask "opera"            # Opera Browser
-cask "obsidian"         # Obsidian (笔记)
-cask "xmind"            # Xmind (思维导图)
-# 快贴 (Kuaitie) - 手动下载: https://kuaitie.cloud/
-mas "Xnip", id: 1221250572  # Xnip (滚动截屏 - App Store)
-mas "白描", id: 1362026606  # 白描 (OCR - App Store)
-cask "screen-studio"    # Screen Studio (丝滑录屏)
-cask "vlc"              # VLC Media Player
-cask "calibre"          # Calibre (电子书管理)
-cask "eudic"            # 欧路词典
-cask "pdfgear"          # PDFgear
-mas "Friendly Streaming", id: 553245401 # Friendly Browser (隐形浏览器)
-mas "Simple Recorder", id: 989175722    # 简洁录音机 (一键录音)
-cask "wechat"           # 微信
-cask "qqmusic"          # QQ音乐
-cask "netease-cloud-music" # 网易云音乐
+cask "google-chrome"  # Browser.
+cask "obsidian"  # Notes and personal library.
+cask "kuaitie"  # Clipboard sync tool with mobile device support.
+mas "Xnip", id: 1221250572  # Screenshot tool supporting scrolling capture, local highlighting, step annotation.
+# manual "baimiao", link: https://baimiao.uzero.cn/  # Screenshot OCR tool with high accuracy for Chinese text recognition.
+cask "screen-studio"  # Screen recording tool with mouse following and automatic camera zooming.
+cask "vlc"  # Local multimedia player supporting a wide range of formats.
+cask "calibre"  # E-book management tool.
+cask "eudic"  # Dictionary software.
+cask "wechat"  # Dominant Chinese IM.
+cask "qqmusic"  # Rich music library.
+cask "neteasemusic"  # Supplementary music library.
+mas "Friendly Streaming", id: 553245401  # Invisible browser (borderless, shadowless - you can imagine what it's used for).
 
 # ==========================================
-# ⚔️ 生产工具
+# ⚔️ Production Tools
 # ==========================================
-cask "visual-studio-code" # VS Code
-# 影刀 (YingDao) - 手动下载: https://www.yingdao.com/
-cask "figma"            # Figma
-cask "gimp"             # GIMP (图像处理)
-cask "inkscape"         # Inkscape (矢量绘图)
-# Caesium - 手动下载: https://saerasoft.com/caesium/
-mas "CollageIt 3 Free", id: 414307504 # Collagelt (拼图 - App Store)
-cask "handbrake"        # HandBrake (视频转码)
+cask "visual-studio-code"  # Popular IDE.
+# manual "yingdao", link: https://www.yingdao.com/  # Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful.
+cask "xmind"  # Mind Map.
+cask "figma"  # UI Design.
+cask "gimp"  # Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style.
+cask "inkscape"  # Vector graphics tool, free alternative to Illustrator. Opens .ai files with good fidelity, sufficient for downloading assets and saving as images.
+# manual "caesium", link: https://saerasoft.com/caesium/  # Image compression tool.
+# manual "CollageIt 3 Free", link: https://www.collageitfree.com/  # Collage tool for quickly creating photo walls and mood boards. Free version has watermark.
+cask "handbrake"  # Large video compression for easy transfer. Also converts videos from other formats to MP4.
