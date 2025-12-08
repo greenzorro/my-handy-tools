@@ -1,5 +1,7 @@
 # my-handy-tools
 
+Automated software deployment toolkit for Windows (winget) and macOS (Homebrew). Manages app lists, generates docs, and provides smart package control.
+
 For Windows users: Press Win+R, type "powershell", then copy-paste commands of chosen apps to install.
 
 For Mac users: Press Command+Space, type "Terminal", hit Enter, paste this command in Terminal to install Homebrew: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`, then copy-paste commands of chosen apps to install.
