@@ -35,8 +35,8 @@ $AppList = @(
     @{ Type="Title"; Name="File & Software Management" },
     @{ Type="Winget"; Id="GeekUninstaller.GeekUninstaller"; Name="Geek Uninstaller"; Desc="Uninstaller and cleanup tool." },
     @{ Type="Winget"; Id="Google.GoogleDrive"; Name="Google Drive"; Desc="Cloud drive and sync tool." },
-    @{ Type="Manual"; Name="Resilio Sync"; Link="https://www.resilio.com/sync/"; Desc="P2P sync tool, no cloud storage." },
-    @{ Type="Manual"; Name="Odrive sync"; Link="https://www.odrive.com/"; Desc="Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions." },
+    @{ Type="Manual"; Link="https://www.resilio.com/sync/"; Name="Resilio Sync"; Desc="P2P sync tool, no cloud storage." },
+    @{ Type="Manual"; Link="https://www.odrive.com/"; Name="Odrive sync"; Desc="Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions." },
     @{ Type="Winget"; Id="7zip.7zip"; Name="7-Zip"; Desc="File compression and extraction tool." },
     @{ Type="Winget"; Id="TGRMNSoftware.BulkRenameUtility"; Name="Bulk Rename Utility"; Desc="Powerful rename tool that can handle almost any batch renaming requirement." },
     @{ Type="Winget"; Id="SoftDeluxe.FreeDownloadManager"; Name="Free Download Manager"; Desc="Download manager tool." },
@@ -48,7 +48,7 @@ $AppList = @(
     @{ Type="Title"; Name="Daily Use" },
     @{ Type="Winget"; Id="Google.Chrome.EXE"; Name="Google Chrome"; Desc="Browser." },
     @{ Type="Winget"; Id="Obsidian.Obsidian"; Name="Obsidian"; Desc="Notes and personal library." },
-    @{ Type="Manual"; Name="Kuaitie"; Link="https://kuaitie.cloud/"; Desc="Clipboard sync tool with mobile device support." },
+    @{ Type="Manual"; Link="https://kuaitie.cloud/"; Name="Kuaitie"; Desc="Clipboard sync tool with mobile device support." },
     @{ Type="Winget"; Id="ShareX.ShareX"; Name="ShareX"; Desc="Screenshot and screen recording tool with extensive shortcuts, supports scrolling capture, local highlighting, step annotation. Includes utilities: image stitching, splitting, adding borders to screenshots." },
     @{ Type="Winget"; Id="Uzero.ScanScan"; Name="Baimiao"; Desc="Screenshot OCR tool with high accuracy for Chinese text recognition." },
     @{ Type="Winget"; Id="VideoLAN.VLC"; Name="VLC Media Player"; Desc="Local multimedia player supporting a wide range of formats." },
@@ -63,13 +63,13 @@ $AppList = @(
     # ==========================================
     @{ Type="Title"; Name="Production Tools" },
     @{ Type="Winget"; Id="Microsoft.VisualStudioCode"; Name="VS Code"; Desc="Popular IDE." },
-    @{ Type="Manual"; Name="YingDao"; Link="https://www.yingdao.com/"; Desc="Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful." },
+    @{ Type="Manual"; Link="https://www.yingdao.com/"; Name="YingDao"; Desc="Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful." },
     @{ Type="Winget"; Id="Xmind.Xmind"; Name="Xmind"; Desc="Mind Map." },
     @{ Type="Winget"; Id="Figma.Figma"; Name="Figma"; Desc="UI Design." },
     @{ Type="Winget"; Id="GIMP.GIMP.3"; Name="GIMP 3.0"; Desc="Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style." },
     @{ Type="Winget"; Id="Inkscape.Inkscape"; Name="Inkscape"; Desc="Vector graphics tool, free alternative to Illustrator. Opens .ai files with good fidelity, sufficient for downloading assets and saving as images." },
     @{ Type="Winget"; Id="SaeraSoft.CaesiumImageCompressor"; Name="Caesium"; Desc="Image compression tool." },
-    @{ Type="Manual"; Name="Collagelt"; Link="https://www.collageitfree.com/"; Desc="Collage tool for quickly creating photo walls and mood boards. Free version has watermark." },
+    @{ Type="Manual"; Link="https://www.collageitfree.com/"; Name="Collagelt"; Desc="Collage tool for quickly creating photo walls and mood boards. Free version has watermark." },
     @{ Type="Winget"; Id="HandBrake.HandBrake"; Name="HandBrake"; Desc="Large video compression for easy transfer. Also converts videos from other formats to MP4." }
 )
 
