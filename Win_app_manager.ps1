@@ -63,7 +63,6 @@ $AppList = @(
     # ==========================================
     @{ Type="Title"; Name="Production Tools" },
     @{ Type="Winget"; Id="Microsoft.VisualStudioCode"; Name="VS Code"; Desc="Popular IDE." },
-    @{ Type="Manual"; Link="https://www.yingdao.com/"; Name="YingDao"; Desc="Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful." },
     @{ Type="Winget"; Id="Xmind.Xmind"; Name="Xmind"; Desc="Mind Map." },
     @{ Type="Winget"; Id="Figma.Figma"; Name="Figma"; Desc="UI Design." },
     @{ Type="Winget"; Id="GIMP.GIMP.3"; Name="GIMP 3.0"; Desc="Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style." },

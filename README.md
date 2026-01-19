@@ -212,12 +212,6 @@ Popular IDE.
 winget install Microsoft.VisualStudioCode
 ```
 
-**YingDao**
-
-Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful.
-
-> Manual install: [https://www.yingdao.com/](https://www.yingdao.com/)
-
 **Xmind**
 
 Mind Map.
@@ -468,12 +462,6 @@ Popular IDE.
 ```bash
 brew install --cask visual-studio-code
 ```
-
-**yingdao**
-
-Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful.
-
-> Manual install: [https://www.yingdao.com/](https://www.yingdao.com/)
 
 **xmind**
 
