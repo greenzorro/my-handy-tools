@@ -51,7 +51,6 @@ mas "Friendly Streaming", id: 553245401  # Invisible browser (borderless, shadow
 # ⚔️ Production Tools
 # ==========================================
 cask "visual-studio-code"  # Popular IDE.
-# manual "yingdao", link: https://www.yingdao.com/  # Extremely powerful automation workflow tool, like iPhone Shortcuts on computer but much more powerful.
 cask "xmind"  # Mind Map.
 cask "figma"  # UI Design.
 cask "gimp"  # Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style.
