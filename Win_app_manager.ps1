@@ -26,6 +26,7 @@ $AppList = @(
     @{ Type="Winget"; Id="BleachBit.BleachBit"; Name="BleachBit"; Desc="Disk cleaning tool." },
     @{ Type="Winget"; Id="ClashVergeRev.ClashVergeRev"; Name="Clash Verge Rev"; Desc="Proxy Client." },
     @{ Type="Winget"; Id="QL-Win.QuickLook"; Name="QuickLook"; Desc="File preview by pressing spacebar, bringing macOS QuickLook functionality to Windows." },
+    @{ Type="Winget"; Id="voidtools.Everything"; Name="Everything"; Desc="File search tool." },
     @{ Type="Winget"; Id="OliverSchwendener.ueli"; Name="Ueli"; Desc="Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed." },
     # @{ Type="Winget"; Id="9PFXXSHC64H3"; Name="Raycast"; Desc="Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed." },
 
