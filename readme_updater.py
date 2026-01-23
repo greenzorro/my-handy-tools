@@ -1,11 +1,11 @@
-'''
+"""
 File: readme_updater.py
 Project: my-handy-tools
 Created: 2025-12-08 10:10:49
 Author: Victor Cheng
 Email: hi@victor42.work
 Description: 自动从 .ps1 和 Brewfile 生成 README.md 内容
-'''
+"""
 
 import os
 import sys
