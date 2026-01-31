@@ -44,6 +44,14 @@ File preview by pressing spacebar, bringing macOS QuickLook functionality to Win
 winget install QL-Win.QuickLook
 ```
 
+**Everything**
+
+File search tool.
+
+```powershell
+winget install voidtools.Everything
+```
+
 **Ueli**
 
 Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed.
@@ -130,6 +138,14 @@ Notes and personal library.
 
 ```powershell
 winget install Obsidian.Obsidian
+```
+
+**Zhipu GLM Voice Input**
+
+AI Voice Input
+
+```powershell
+winget install ZhipuAI.AutoGLM
 ```
 
 **Kuaitie**
@@ -366,6 +382,12 @@ Notes and personal library.
 ```bash
 brew install --cask obsidian
 ```
+
+**Zhipu GLM Input**
+
+AI Voice Input.
+
+> Manual install: [https://autoglm.zhipuai.cn/autotyper/](https://autoglm.zhipuai.cn/autotyper/)
 
 **kuaitie**
 
