@@ -49,6 +49,7 @@ $AppList = @(
     @{ Type="Title"; Name="Daily Use" },
     @{ Type="Winget"; Id="Google.Chrome.EXE"; Name="Google Chrome"; Desc="Browser." },
     @{ Type="Winget"; Id="Obsidian.Obsidian"; Name="Obsidian"; Desc="Notes and personal library." },
+    @{ Type="Winget"; Id="ZhipuAI.AutoGLM"; Name="Zhipu GLM Voice Input"; Desc="AI Voice Input" },
     @{ Type="Manual"; Link="https://kuaitie.cloud/"; Name="Kuaitie"; Desc="Clipboard sync tool with mobile device support." },
     @{ Type="Winget"; Id="ShareX.ShareX"; Name="ShareX"; Desc="Screenshot and screen recording tool with extensive shortcuts, supports scrolling capture, local highlighting, step annotation. Includes utilities: image stitching, splitting, adding borders to screenshots." },
     @{ Type="Winget"; Id="Uzero.ScanScan"; Name="Baimiao"; Desc="Screenshot OCR tool with high accuracy for Chinese text recognition." },
