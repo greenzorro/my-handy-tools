@@ -35,6 +35,7 @@ cask "free-download-manager"  # Download manager tool.
 # ==========================================
 cask "google-chrome"  # Browser.
 cask "obsidian"  # Notes and personal library.
+cask "wetype"  # Input Method.
 # manual "Zhipu GLM Input", link: https://autoglm.zhipuai.cn/autotyper/  # AI Voice Input.
 cask "kuaitie"  # Clipboard sync tool with mobile device support.
 mas "Xnip", id: 1221250572  # Screenshot tool supporting scrolling capture, local highlighting, step annotation.
