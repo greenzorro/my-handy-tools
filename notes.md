@@ -121,7 +121,7 @@ class AppInfo:
 ```powershell
 @{Type="Title";Name="OS Enhancements"}
 @{Type="Winget";Id="Eassos.DiskGenius";Name="DiskGenius (Disk Recovery)"}
-@{Type="Manual";Name="Clash Verge Rev";Link="https://...";Desc="Proxy Client"}
+@{Type="Manual";Name="Resilio Sync";Link="https://...";Desc="P2P sync tool"}
 ```
 
 **注意**:
@@ -138,7 +138,7 @@ class AppInfo:
 mas "Cleaner One Pro", id: 1549813210
 cask "raycast"
 brew "wget"
-# manual "Clash Verge Rev", link: https://github.com/...
+# manual "Dozer", link: https://github.com/Mortennn/Dozer
 ```
 
 **解析能力**:
@@ -245,7 +245,7 @@ $AppList = @(
     @{Type="Winget";Id="Eassos.DiskGenius";Name="DiskGenius (Disk Recovery)"}
 
     # 手动安装软件
-    @{Type="Manual";Name="Clash Verge Rev";Link="https://...";Desc="Proxy Client"}
+    @{Type="Manual";Name="Resilio Sync";Link="https://...";Desc="P2P sync tool"}
 )
 ```
 
