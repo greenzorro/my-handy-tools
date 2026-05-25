@@ -28,14 +28,6 @@ Disk cleaning tool.
 winget install BleachBit.BleachBit
 ```
 
-**Clash Verge Rev**
-
-Proxy Client.
-
-```powershell
-winget install ClashVergeRev.ClashVergeRev
-```
-
 **QuickLook**
 
 File preview by pressing spacebar, bringing macOS QuickLook functionality to Windows.
@@ -138,6 +130,14 @@ Notes and personal library.
 
 ```powershell
 winget install Obsidian.Obsidian
+```
+
+**Wechat Input Method**
+
+Input Method
+
+```powershell
+winget install Tencent.WeType
 ```
 
 **Zhipu GLM Voice Input**
@@ -315,14 +315,6 @@ Launcher that requires some habit change, but becomes a productivity powerhouse 
 brew install --cask raycast
 ```
 
-**clash-verge-rev**
-
-Proxy Client.
-
-```bash
-brew install --cask clash-verge-rev
-```
-
 ### File & Software Management
 
 **appcleaner**
@@ -381,6 +373,14 @@ Notes and personal library.
 
 ```bash
 brew install --cask obsidian
+```
+
+**wetype**
+
+Input Method.
+
+```bash
+brew install --cask wetype
 ```
 
 **Zhipu GLM Input**
