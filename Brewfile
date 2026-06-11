@@ -51,6 +51,8 @@ mas "Friendly Streaming", id: 553245401  # Invisible browser (borderless, shadow
 # ==========================================
 # ⚔️ Production Tools
 # ==========================================
+cask "opencode-desktop"  # AI agent.
+cask "antigravity"  # AI agent.
 cask "visual-studio-code"  # Popular IDE.
 cask "xmind"  # Mind Map.
 cask "figma"  # UI Design.

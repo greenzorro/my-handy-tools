@@ -64,6 +64,8 @@ $AppList = @(
     # Production Tools
     # ==========================================
     @{ Type="Title"; Name="Production Tools" },
+    @{ Type="Winget"; Id="SST.OpenCodeDesktop"; Name="OpenCode"; Desc="AI agent." },
+    @{ Type="Winget"; Id="Google.Antigravity"; Name="Google Antigravity"; Desc="AI agent." },
     @{ Type="Winget"; Id="Microsoft.VisualStudioCode"; Name="VS Code"; Desc="Popular IDE." },
     @{ Type="Winget"; Id="Xmind.Xmind"; Name="Xmind"; Desc="Mind Map." },
     @{ Type="Winget"; Id="Figma.Figma"; Name="Figma"; Desc="UI Design." },
