@@ -220,14 +220,6 @@ winget install NetEase.CloudMusic
 
 ### Production Tools
 
-**OpenCode**
-
-AI agent.
-
-```powershell
-winget install SST.OpenCodeDesktop
-```
-
 **Google Antigravity**
 
 AI agent.
@@ -492,14 +484,6 @@ mas install 553245401
 ```
 
 ### Production Tools
-
-**opencode-desktop**
-
-AI agent.
-
-```bash
-brew install --cask opencode-desktop
-```
 
 **antigravity**
 
