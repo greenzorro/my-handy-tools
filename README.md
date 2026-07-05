@@ -228,12 +228,12 @@ AI agent.
 winget install Google.Antigravity
 ```
 
-**VS Code**
+**Sublime Text**
 
-Popular IDE.
+Text editor.
 
 ```powershell
-winget install Microsoft.VisualStudioCode
+winget install SublimeHQ.SublimeText.4
 ```
 
 **Xmind**
@@ -493,12 +493,12 @@ AI agent.
 brew install --cask antigravity
 ```
 
-**visual-studio-code**
+**sublime-text**
 
-Popular IDE.
+Text editor.
 
 ```bash
-brew install --cask visual-studio-code
+brew install --cask sublime-text
 ```
 
 **xmind**

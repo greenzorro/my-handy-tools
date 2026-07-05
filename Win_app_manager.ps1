@@ -65,7 +65,7 @@ $AppList = @(
     # ==========================================
     @{ Type="Title"; Name="Production Tools" },
     @{ Type="Winget"; Id="Google.Antigravity"; Name="Google Antigravity"; Desc="AI agent." },
-    @{ Type="Winget"; Id="Microsoft.VisualStudioCode"; Name="VS Code"; Desc="Popular IDE." },
+    @{ Type="Winget"; Id="SublimeHQ.SublimeText.4"; Name="Sublime Text"; Desc="Text editor." },
     @{ Type="Winget"; Id="Xmind.Xmind"; Name="Xmind"; Desc="Mind Map." },
     @{ Type="Winget"; Id="Figma.Figma"; Name="Figma"; Desc="UI Design." },
     @{ Type="Winget"; Id="GIMP.GIMP.3"; Name="GIMP 3.0"; Desc="Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style." },

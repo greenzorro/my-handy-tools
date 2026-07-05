@@ -52,7 +52,7 @@ mas "Friendly Streaming", id: 553245401  # Invisible browser (borderless, shadow
 # ⚔️ Production Tools
 # ==========================================
 cask "antigravity"  # AI agent.
-cask "visual-studio-code"  # Popular IDE.
+cask "sublime-text"  # Text editor.
 cask "xmind"  # Mind Map.
 cask "figma"  # UI Design.
 cask "gimp"  # Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style.
