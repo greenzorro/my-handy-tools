@@ -80,7 +80,9 @@ P2P sync tool, no cloud storage.
 
 Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions.
 
-> Manual install: [https://www.odrive.com/](https://www.odrive.com/)
+```powershell
+winget install OxygenCloud.odrive
+```
 
 **7-Zip**
 
@@ -104,14 +106,6 @@ Download manager tool.
 
 ```powershell
 winget install SoftDeluxe.FreeDownloadManager
-```
-
-**IPFS Desktop**
-
-Decentralized storage.
-
-```powershell
-winget install IPFS.IPFS-Desktop
 ```
 
 ### Daily Use
@@ -208,14 +202,6 @@ Rich music library.
 
 ```powershell
 winget install Tencent.QQMusic
-```
-
-**NetEase Cloud Music**
-
-Supplementary music library.
-
-```powershell
-winget install NetEase.CloudMusic
 ```
 
 ### Production Tools
@@ -459,14 +445,6 @@ Rich music library.
 brew install --cask qqmusic
 ```
 
-**neteasemusic**
-
-Supplementary music library.
-
-```bash
-brew install --cask neteasemusic
-```
-
 **Friendly Streaming**
 
 borderless, shadowless - you can imagine what it's used for
@@ -523,11 +501,13 @@ Image compression tool.
 
 > Manual install: [https://saerasoft.com/caesium/](https://saerasoft.com/caesium/)
 
-**CollageIt 3 Free**
+**拼贴精灵3 精简版**
 
-Collage tool for quickly creating photo walls and mood boards. Free version has watermark.
+CollageIt 3 Free - Collage tool for quickly creating photo walls and mood boards. Free version has watermark.
 
-> Manual install: [https://www.collageitfree.com/](https://www.collageitfree.com/)
+```bash
+mas install 675540049
+```
 
 **handbrake**
 

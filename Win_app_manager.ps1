@@ -36,11 +36,10 @@ $AppList = @(
     @{ Type="Winget"; Id="GeekUninstaller.GeekUninstaller"; Name="Geek Uninstaller"; Desc="Uninstaller and cleanup tool." },
     @{ Type="Winget"; Id="Google.GoogleDrive"; Name="Google Drive"; Desc="Cloud drive and sync tool." },
     @{ Type="Manual"; Link="https://www.resilio.com/sync/"; Name="Resilio Sync"; Desc="P2P sync tool, no cloud storage." },
-    @{ Type="Manual"; Link="https://www.odrive.com/"; Name="Odrive sync"; Desc="Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions." },
+    @{ Type="Winget"; Id="OxygenCloud.odrive"; Name="Odrive sync"; Desc="Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions." },
     @{ Type="Winget"; Id="7zip.7zip"; Name="7-Zip"; Desc="File compression and extraction tool." },
     @{ Type="Winget"; Id="TGRMNSoftware.BulkRenameUtility"; Name="Bulk Rename Utility"; Desc="Powerful rename tool that can handle almost any batch renaming requirement." },
     @{ Type="Winget"; Id="SoftDeluxe.FreeDownloadManager"; Name="Free Download Manager"; Desc="Download manager tool." },
-    @{ Type="Winget"; Id="IPFS.IPFS-Desktop"; Name="IPFS Desktop"; Desc="Decentralized storage." },
 
     # ==========================================
     # Daily Use
@@ -58,7 +57,6 @@ $AppList = @(
     @{ Type="Winget"; Id="EuSoft.Eudic"; Name="Eudic Dictionary"; Desc="Dictionary software." },
     @{ Type="Winget"; Id="Tencent.WeChat"; Name="WeChat"; Desc="Dominant Chinese IM." },
     @{ Type="Winget"; Id="Tencent.QQMusic"; Name="QQ Music"; Desc="Rich music library." },
-    @{ Type="Winget"; Id="NetEase.CloudMusic"; Name="NetEase Cloud Music"; Desc="Supplementary music library." },
 
     # ==========================================
     # Production Tools

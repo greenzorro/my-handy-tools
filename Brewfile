@@ -45,7 +45,6 @@ cask "calibre"  # E-book management tool.
 cask "eudic"  # Dictionary software.
 cask "wechat"  # Dominant Chinese IM.
 cask "qqmusic"  # Rich music library.
-cask "neteasemusic"  # Supplementary music library.
 mas "Friendly Streaming", id: 553245401  # Invisible browser (borderless, shadowless - you can imagine what it's used for).
 
 # ==========================================
@@ -57,5 +56,5 @@ cask "figma"  # UI Design.
 cask "gimp"  # Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style.
 cask "inkscape"  # Vector graphics tool, free alternative to Illustrator. Opens .ai files with good fidelity, sufficient for downloading assets and saving as images.
 # manual "caesium", link: https://saerasoft.com/caesium/  # Image compression tool.
-# manual "CollageIt 3 Free", link: https://www.collageitfree.com/  # Collage tool for quickly creating photo walls and mood boards. Free version has watermark.
+mas "拼贴精灵3 精简版", id: 675540049  # CollageIt 3 Free - Collage tool for quickly creating photo walls and mood boards. Free version has watermark.
 cask "handbrake"  # Large video compression for easy transfer. Also converts videos from other formats to MP4.
