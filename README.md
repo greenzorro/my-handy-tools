@@ -236,14 +236,6 @@ Text editor.
 winget install SublimeHQ.SublimeText.4
 ```
 
-**Xmind**
-
-Mind Map.
-
-```powershell
-winget install Xmind.Xmind
-```
-
 **Figma**
 
 UI Design.
@@ -499,14 +491,6 @@ Text editor.
 
 ```bash
 brew install --cask sublime-text
-```
-
-**xmind**
-
-Mind Map.
-
-```bash
-brew install --cask xmind
 ```
 
 **figma**
