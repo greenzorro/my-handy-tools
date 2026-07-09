@@ -222,14 +222,6 @@ Text editor.
 winget install SublimeHQ.SublimeText.4
 ```
 
-**Figma**
-
-UI Design.
-
-```powershell
-winget install Figma.Figma
-```
-
 **GIMP 3.0**
 
 Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style.
@@ -469,14 +461,6 @@ Text editor.
 
 ```bash
 brew install --cask sublime-text
-```
-
-**figma**
-
-UI Design.
-
-```bash
-brew install --cask figma
 ```
 
 **gimp**
