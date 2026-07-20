@@ -97,7 +97,16 @@ parse_brewfile() {
         ((line_num++)) || true
         line_trimmed=$(echo "$line" | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
 
-        # 跳过空行和纯注释行
+        # manual 条目使用注释语法，必须先于普通注释解析
+        if [[ "$line_trimmed" =~ ^\#[[:space:]]*manual[[:space:]]+\"([^\"]+)\",[[:space:]]*link:[[:space:]]*([^[:space:]]+) ]]; then
+            app_name="${BASH_REMATCH[1]}"
+            app_link="${BASH_REMATCH[2]}"
+            manual_apps["$app_name"]="$app_link"
+            log "发现手动安装应用: $app_name (链接: $app_link, 行 $line_num)"
+            continue
+        fi
+
+        # 跳过空行和其他注释行
         if [[ -z "$line_trimmed" ]] || [[ "$line_trimmed" == \#* ]]; then
             continue
         fi
@@ -115,12 +124,6 @@ parse_brewfile() {
             mas_apps["$app_name"]="$app_id"
             log "发现 App Store 应用: $app_name (ID: $app_id, 行 $line_num)"
 
-        # 解析 manual (注释格式: # manual "App Name", link: https://...)
-        elif [[ "$line_trimmed" =~ ^\#[[:space:]]*manual[[:space:]]+\"([^\"]+)\",[[:space:]]*link:[[:space:]]*(.+) ]]; then
-            app_name="${BASH_REMATCH[1]}"
-            app_link="${BASH_REMATCH[2]}"
-            manual_apps["$app_name"]="$app_link"
-            log "发现手动安装应用: $app_name (链接: $app_link, 行 $line_num)"
         fi
     done < "$BREWFILE"
 
@@ -452,5 +455,6 @@ main() {
     log "脚本执行完成，详细日志请查看: $LOG_FILE"
 }
 
-# 运行主函数
-main "$@"
+if [[ "${BASH_SOURCE[0]}" == "$0" ]]; then
+    main "$@"
+fi
