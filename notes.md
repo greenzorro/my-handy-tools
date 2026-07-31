@@ -135,7 +135,7 @@ class AppInfo:
 **支持的数据格式**:
 ```bash
 # OS Enhancements
-mas "Cleaner One Pro", id: 1549813210
+mas "Xnip", id: 1221250572
 cask "raycast"
 brew "wget"
 # manual "Dozer", link: https://github.com/Mortennn/Dozer

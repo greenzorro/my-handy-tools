@@ -20,14 +20,6 @@ Disk management and recovery tool.
 winget install Eassos.DiskGenius
 ```
 
-**BleachBit**
-
-Disk cleaning tool.
-
-```powershell
-winget install BleachBit.BleachBit
-```
-
 **QuickLook**
 
 File preview by pressing spacebar, bringing macOS QuickLook functionality to Windows.
@@ -256,14 +248,6 @@ winget install HandBrake.HandBrake
 ## Mac
 
 ### OS Enhancements
-
-**Cleaner One Pro**
-
-Disk cleaning tool.
-
-```bash
-mas install 1133028347
-```
 
 **dozer**
 

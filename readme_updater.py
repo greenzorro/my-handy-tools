@@ -137,12 +137,16 @@ def parse_brewfile(filepath: str) -> List[AppInfo]:
             # # ==========================================
             # # 分类名
             # # ==========================================
+            # 仅在「起始分隔线」时取下一行：下一行是标题，且再下一行仍是分隔线。
+            # 避免收尾分隔线把后面的 `# manual ...` 误当作分类名。
             if line.startswith('# =') and line.endswith('='):
-                # 检查下一行是否是分类名
-                if i + 1 < len(lines):
+                if i + 2 < len(lines):
                     next_line = lines[i + 1].strip()
-                    if next_line.startswith('# ') and not next_line.startswith('# ='):
-                        # 提取分类名（移除 emoji）
+                    after_next = lines[i + 2].strip()
+                    if (next_line.startswith('# ')
+                            and not next_line.startswith('# =')
+                            and after_next.startswith('# =')
+                            and after_next.endswith('=')):
                         category_match = re.search(r'^#\s*(.+)$', next_line)
                         if category_match:
                             category = category_match.group(1).strip()
