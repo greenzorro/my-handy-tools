@@ -25,7 +25,6 @@ cask "raycast"  # Launcher that requires some habit change, but becomes a produc
 cask "appcleaner"  # Uninstaller and cleanup tool.
 cask "google-drive"  # Cloud drive and sync tool.
 cask "resilio-sync"  # P2P sync tool, no cloud storage.
-cask "odrive"  # Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions.
 cask "free-download-manager"  # Download manager tool.
 
 # ==========================================

@@ -68,14 +68,6 @@ P2P sync tool, no cloud storage.
 
 > Manual install: [https://www.resilio.com/sync/](https://www.resilio.com/sync/)
 
-**Odrive sync**
-
-Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions.
-
-```powershell
-winget install OxygenCloud.odrive
-```
-
 **7-Zip**
 
 File compression and extraction tool.
@@ -293,14 +285,6 @@ P2P sync tool, no cloud storage.
 
 ```bash
 brew install --cask resilio-sync
-```
-
-**odrive**
-
-Unified cloud storage sync tool that connects to Google Drive/OneDrive/Dropbox, bypassing network and client restrictions.
-
-```bash
-brew install --cask odrive
 ```
 
 **free-download-manager**
