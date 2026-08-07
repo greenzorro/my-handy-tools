@@ -36,7 +36,6 @@ cask "wetype"  # Input Method.
 cask "kuaitie"  # Clipboard sync tool with mobile device support.
 mas "Xnip", id: 1221250572  # Screenshot tool supporting scrolling capture, local highlighting, step annotation.
 # manual "baimiao", link: https://baimiao.uzero.cn/  # Screenshot OCR tool with high accuracy for Chinese text recognition.
-cask "screen-studio"  # Screen recording tool with mouse following and automatic camera zooming.
 cask "vlc"  # Local multimedia player supporting a wide range of formats.
 cask "calibre"  # E-book management tool.
 cask "eudic"  # Dictionary software.

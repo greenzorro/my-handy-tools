@@ -343,14 +343,6 @@ Screenshot OCR tool with high accuracy for Chinese text recognition.
 
 > Manual install: [https://baimiao.uzero.cn/](https://baimiao.uzero.cn/)
 
-**screen-studio**
-
-Screen recording tool with mouse following and automatic camera zooming.
-
-```bash
-brew install --cask screen-studio
-```
-
 **vlc**
 
 Local multimedia player supporting a wide range of formats.
