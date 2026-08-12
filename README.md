@@ -172,14 +172,6 @@ Dominant Chinese IM.
 winget install Tencent.WeChat
 ```
 
-**QQ Music**
-
-Rich music library.
-
-```powershell
-winget install Tencent.QQMusic
-```
-
 ### Production Tools
 
 **Google Antigravity**
@@ -373,14 +365,6 @@ Dominant Chinese IM.
 
 ```bash
 brew install --cask wechat
-```
-
-**qqmusic**
-
-Rich music library.
-
-```bash
-brew install --cask qqmusic
 ```
 
 **Friendly Streaming**

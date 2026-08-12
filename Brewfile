@@ -40,7 +40,6 @@ cask "vlc"  # Local multimedia player supporting a wide range of formats.
 cask "calibre"  # E-book management tool.
 cask "eudic"  # Dictionary software.
 cask "wechat"  # Dominant Chinese IM.
-cask "qqmusic"  # Rich music library.
 mas "Friendly Streaming", id: 553245401  # Invisible browser (borderless, shadowless - you can imagine what it's used for).
 
 # ==========================================

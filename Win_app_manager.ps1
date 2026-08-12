@@ -53,7 +53,6 @@ $AppList = @(
     @{ Type="Winget"; Id="calibre.calibre"; Name="Calibre"; Desc="E-book management tool." },
     @{ Type="Winget"; Id="EuSoft.Eudic"; Name="Eudic Dictionary"; Desc="Dictionary software." },
     @{ Type="Winget"; Id="Tencent.WeChat"; Name="WeChat"; Desc="Dominant Chinese IM." },
-    @{ Type="Winget"; Id="Tencent.QQMusic"; Name="QQ Music"; Desc="Rich music library." },
 
     # ==========================================
     # Production Tools
