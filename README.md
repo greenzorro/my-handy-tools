@@ -118,14 +118,6 @@ Input Method
 winget install Tencent.WeType
 ```
 
-**Zhipu GLM Voice Input**
-
-AI Voice Input
-
-```powershell
-winget install ZhipuAI.AutoGLM
-```
-
 **Kuaitie**
 
 Clipboard sync tool with mobile device support.
@@ -320,12 +312,6 @@ Input Method.
 ```bash
 brew install --cask wetype
 ```
-
-**Zhipu GLM Input**
-
-AI Voice Input.
-
-> Manual install: [https://autoglm.zhipuai.cn/autotyper/](https://autoglm.zhipuai.cn/autotyper/)
 
 **kuaitie**
 
