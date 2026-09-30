@@ -233,11 +233,13 @@ winget install HandBrake.HandBrake
 
 ### OS Enhancements
 
-**dozer**
+**hiddenbar**
 
 Menu bar icon management tool that hides infrequently used icons.
 
-> Manual install: [https://github.com/Mortennn/Dozer](https://github.com/Mortennn/Dozer)
+```bash
+brew install --cask hiddenbar
+```
 
 **hyperswitch**
 

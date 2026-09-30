@@ -138,7 +138,7 @@ class AppInfo:
 mas "Xnip", id: 1221250572
 cask "raycast"
 brew "wget"
-# manual "Dozer", link: https://github.com/Mortennn/Dozer
+# manual "hyperswitch", link: https://bahoom.com/hyperswitch
 ```
 
 **解析能力**:

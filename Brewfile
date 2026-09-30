@@ -15,7 +15,7 @@
 # ==========================================
 # ⚙️ OS Enhancements
 # ==========================================
-# manual "dozer", link: https://github.com/Mortennn/Dozer  # Menu bar icon management tool that hides infrequently used icons.
+cask "hiddenbar"  # Menu bar icon management tool that hides infrequently used icons.
 # manual "hyperswitch", link: https://bahoom.com/hyperswitch  # Task switcher more flexible and accurate than macOS built-in switching.
 cask "raycast"  # Launcher that requires some habit change, but becomes a productivity powerhouse once accustomed.
 
