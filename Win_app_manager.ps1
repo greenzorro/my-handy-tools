@@ -4,7 +4,7 @@
 #>
 
 # -------------------------------------------------------------------------
-# Note: Run this via "Start.bat" to ensure Admin privileges.
+# Note: Run this via "Win_app_manager_run.bat" to ensure Admin privileges.
 # -------------------------------------------------------------------------
 
 # 1. Admin Privilege Check
@@ -63,8 +63,7 @@ $AppList = @(
     @{ Type="Winget"; Id="GIMP.GIMP.3"; Name="GIMP 3.0"; Desc="Lightweight image processing, free alternative to Photoshop. Complete basic features, fast startup, convenient for quick tasks like resizing. Can change tool shortcuts to Photoshop style." },
     @{ Type="Winget"; Id="Inkscape.Inkscape"; Name="Inkscape"; Desc="Vector graphics tool, free alternative to Illustrator. Opens .ai files with good fidelity, sufficient for downloading assets and saving as images." },
     @{ Type="Winget"; Id="SaeraSoft.CaesiumImageCompressor"; Name="Caesium"; Desc="Image compression tool." },
-    @{ Type="Manual"; Link="https://www.collageitfree.com/"; Name="Collagelt"; Desc="Collage tool for quickly creating photo walls and mood boards. Free version has watermark." },
-    @{ Type="Winget"; Id="HandBrake.HandBrake"; Name="HandBrake"; Desc="Large video compression for easy transfer. Also converts videos from other formats to MP4." }
+    @{ Type="Manual"; Link="https://www.collageitfree.com/"; Name="Collagelt"; Desc="Collage tool for quickly creating photo walls and mood boards. Free version has watermark." }
 )
 
 # 4. Core Functions

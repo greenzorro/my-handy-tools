@@ -220,14 +220,6 @@ Collage tool for quickly creating photo walls and mood boards. Free version has 
 
 > Manual install: [https://www.collageitfree.com/](https://www.collageitfree.com/)
 
-**HandBrake**
-
-Large video compression for easy transfer. Also converts videos from other formats to MP4.
-
-```powershell
-winget install HandBrake.HandBrake
-```
-
 
 ## Mac
 
@@ -423,14 +415,6 @@ CollageIt 3 Free - Collage tool for quickly creating photo walls and mood boards
 
 ```bash
 mas install 675540049
-```
-
-**handbrake**
-
-Large video compression for easy transfer. Also converts videos from other formats to MP4.
-
-```bash
-brew install --cask handbrake
 ```
 
 

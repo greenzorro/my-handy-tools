@@ -51,4 +51,3 @@ cask "gimp"  # Lightweight image processing, free alternative to Photoshop. Comp
 cask "inkscape"  # Vector graphics tool, free alternative to Illustrator. Opens .ai files with good fidelity, sufficient for downloading assets and saving as images.
 # manual "caesium", link: https://saerasoft.com/caesium/  # Image compression tool.
 mas "拼贴精灵3 精简版", id: 675540049  # CollageIt 3 Free - Collage tool for quickly creating photo walls and mood boards. Free version has watermark.
-cask "handbrake"  # Large video compression for easy transfer. Also converts videos from other formats to MP4.

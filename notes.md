@@ -66,6 +66,7 @@ my-handy-tools/
 ├── Win_app_manager.ps1   # Windows软件清单（PowerShell格式）
 ├── Win_app_manager_run.bat # Windows运行脚本（双击启动）
 ├── brew_adoption.sh      # macOS智能接管脚本（Bash）
+├── .gitignore            # 忽略规则（含 adoption.log、__pycache__ 等生成物）
 └── LICENSE               # 开源许可证
 ```
 

@@ -15,7 +15,7 @@ bash_major_version=$(echo "$bash_version_line" | grep -oE '[0-9]+\.[0-9]+' | hea
 if [ -z "$bash_major_version" ] || [ "$bash_major_version" -lt 4 ]; then
     echo "错误：需要 bash 4.0 或更高版本，当前版本: $bash_version_line"
     echo "请通过 Homebrew 安装新版本: brew install bash"
-    echo "然后重新运行脚本: /opt/homebrew/bin/bash ./adoption.sh"
+    echo "然后重新运行脚本: /opt/homebrew/bin/bash ./brew_adoption.sh"
     exit 1
 fi
 
