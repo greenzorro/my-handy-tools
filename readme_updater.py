@@ -4,7 +4,16 @@ Project: my-handy-tools
 Created: 2025-12-08 10:10:49
 Author: Victor Cheng
 Email: hi@victor42.work
-Description: 自动从 .ps1 和 Brewfile 生成 README.md 内容
+Description: 从 Win_app_manager.ps1 与 Brewfile 生成 README.md 的平台段落
+
+生成合同：
+- 生成区 = `## Windows` 起、至首个 `---` 分隔线之前。`## Windows` 以上的开场语
+  与 `---` 以下的页脚属手写区，每次生成原样保留。
+- 生成区内的分类标题、应用条目、安装命令全部由本脚本产出，手改会在下次运行
+  时被覆盖；要改内容请改清单文件。
+- 分类标题取自清单中的纯英文名。Brewfile 分隔线里的 emoji 仅供人眼标记，
+  解析时剥除，两侧 README 标题因此一致。
+- Mac 段在清单含 mas 条目时输出 `mas` CLI 的前置依赖说明。
 """
 
 import os
@@ -18,6 +27,20 @@ if script_dir:
 from dataclasses import dataclass
 from typing import List, Optional
 import re
+
+# README 结构标记：生成区由这两个标题界定，结束于首个水平分隔线
+WINDOWS_SECTION = "## Windows"
+MAC_SECTION = "## Mac"
+SECTION_BREAK = "---"
+
+# Mac 段前置依赖：App Store 条目走 mas，未装 CLI 时 mas install 会直接失败
+MAS_PREAMBLE = (
+    "App Store entries install through `mas`; install the CLI once:\n"
+    "\n"
+    "```bash\n"
+    "brew install mas\n"
+    "```"
+)
 
 
 @dataclass
@@ -261,11 +284,16 @@ def parse_brewfile(filepath: str) -> List[AppInfo]:
 
 
 def extract_description_from_comment(comment: str) -> str:
-    """从注释中提取描述"""
+    """把 Brewfile 行尾注释转成软件描述。
+
+    注释里出现圆括号时，取第一组括号内的文本作描述，括号外的文字丢弃
+    （`# Invisible browser (borderless, shadowless).` → `borderless, shadowless.`）。
+    无括号时整条注释即描述。
+    """
     if not comment:
         return ""
 
-    # 移除括号内容作为描述
+    # 括号内的文字优先：清单里常用「括号补充说明」承载真正的描述
     if '(' in comment and ')' in comment:
         desc_match = re.search(r'\(([^)]+)\)', comment)
         if desc_match:
@@ -320,86 +348,62 @@ def format_app_list(apps: List[AppInfo]) -> str:
     return "\n".join(output)
 
 
+def render_sections(windows_apps: List[AppInfo], mac_apps: List[AppInfo]) -> str:
+    """渲染两段生成区正文：`## Windows` 起，至 Mac 清单结尾。
+
+    Mac 段含 mas 条目时，先输出 `mas` CLI 的前置依赖说明。
+    """
+    parts = [
+        WINDOWS_SECTION, "",
+        format_app_list(windows_apps),
+        "", MAC_SECTION, "",
+    ]
+
+    if any(app.install_type == "mas" and app.mas_id for app in mac_apps):
+        parts.extend([MAS_PREAMBLE, ""])
+
+    parts.append(format_app_list(mac_apps))
+    return "\n".join(parts)
+
+
 def update_readme(windows_apps: List[AppInfo], mac_apps: List[AppInfo], readme_path: str = "README.md"):
-    """更新 README.md 文件 - 保留其他内容，只更新 Windows 和 Mac 部分"""
+    """把清单渲染进 README.md 的生成区，手写区原样保留。
+
+    手写区 = `## Windows` 以上的开场语 + 首个 `---` 起的页脚。
+    文件不存在或缺少结构标记时，按同一骨架补齐生成区。
+    """
     try:
-        # 生成新内容
-        windows_content = format_app_list(windows_apps)
-        mac_content = format_app_list(mac_apps)
+        sections = render_sections(windows_apps, mac_apps)
 
-        # 如果文件不存在，创建新文件
         if not os.path.exists(readme_path):
-            new_content = f"""# my-handy-tools
-
-## Windows
-
-{windows_content}
-## Mac
-
-{mac_content}
-
-"""
+            new_content = f"# my-handy-tools\n\n{sections}\n\n"
         else:
-            # 读取现有 README
             with open(readme_path, 'r', encoding='utf-8') as f:
                 content = f.read()
 
             lines = content.split('\n')
 
-            # 找到 Windows、Mac 和分隔线的位置
+            # 定位生成区边界
             windows_start = -1
             mac_start = -1
             separator_start = len(lines)  # 默认值：文件末尾
 
             for i, line in enumerate(lines):
-                if line.strip() == "## Windows":
+                if line.strip() == WINDOWS_SECTION:
                     windows_start = i
-                elif line.strip() == "## Mac":
+                elif line.strip() == MAC_SECTION:
                     mac_start = i
-                elif line.strip() == "---":
+                elif line.strip() == SECTION_BREAK:
                     separator_start = i
-                    break  # 找到分隔线就结束
+                    break  # 首个分隔线之后即手写页脚
 
-            # 如果找不到结构，创建新的
             if windows_start == -1 or mac_start == -1:
-                # 保留原有内容，在末尾添加结构
-                if not content.endswith('\n'):
-                    content += '\n'
-
-                new_content = content + f"""
-## Windows
-
-{windows_content}
-## Mac
-
-{mac_content}
-
-"""
+                # 缺少结构标记：保留原内容，在末尾补生成区
+                new_content = content.rstrip('\n') + "\n\n" + sections + "\n\n"
             else:
-                # 保留 Windows 之前的内容
-                header = '\n'.join(lines[:windows_start])
-
-                # 保留分隔线之后的内容（包含分隔线）
-                footer = '\n'.join(lines[separator_start:]) if separator_start < len(lines) else ""
-
-                # 构建新内容
-                new_lines = [
-                    header.rstrip('\n'),  # 去掉最后的换行
-                    "",
-                    "## Windows",
-                    "",
-                    windows_content,
-                    "",
-                    "## Mac",
-                    "",
-                    mac_content
-                ]
-
-                if footer.strip():
-                    new_lines.append("")
-                    new_lines.append(footer.lstrip('\n'))  # 去掉开头的换行
-
-                new_content = '\n'.join(new_lines)
+                header = '\n'.join(lines[:windows_start]).rstrip('\n')
+                footer = '\n'.join(lines[separator_start:]).lstrip('\n')
+                new_content = header + "\n\n" + sections + "\n\n" + footer
 
         # 写入文件
         with open(readme_path, 'w', encoding='utf-8') as f:

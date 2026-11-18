@@ -16,7 +16,7 @@
 
 ### 2.2 核心特性
 - ✅ 跨平台软件清单统一管理（Windows + macOS）
-- ✅ README文档自动生成系统
+- ✅ README文档自动生成系统（生成区与手写区分离，开场语与页脚不被覆盖）
 - ✅ macOS智能接管脚本（强制统一软件来源）
 - ✅ 分类化软件管理（OS增强、文件管理、日常使用、生产工具）
 - ✅ 多种安装类型支持（winget/cask/mas/brew/manual）
@@ -127,7 +127,7 @@ class AppInfo:
 
 **注意**:
 - 分类标题使用英文名称（如 "OS Enhancements"）
-- Winget应用的描述可以放在`Name`字段的括号中，或使用`Desc`字段
+- 描述取 `Desc` 字段；缺 `Desc` 时以 `Name` 兜底，此时名称与描述同值
 - Manual应用需要`Link`字段和可选的`Desc`字段
 
 #### 5.2.2 Brewfile解析器
@@ -148,25 +148,39 @@ brew "wget"
 - `brew`: Homebrew 命令行工具
 - `manual`: 手动安装应用程序（注释格式）
 
+**解析约定**:
+- 分类标题要求三行相邻：`# =====` / `# 分类名` / `# =====`；只有起始分隔线取标题，收尾分隔线不会被误读为分类
+- 分类名里的 emoji 在解析时剥除（`re.sub(r'[^\w\s&]', '', ...)`），README 标题因此是纯英文
+- 行尾注释即描述来源；注释含圆括号时取第一组括号内文本，括号外文字不进描述
+- `# manual "名", link: URL` 的链接为必填，`#` 之后可再追加描述注释
+
 ### 5.3 文档生成系统
 
 #### 5.3.1 格式化引擎
 文件: `readme_updater.py` 中的 `format_app_list()` 函数
 
 **生成逻辑**:
-1. 按分类分组软件
-2. 每个分类生成 Markdown 标题
-3. 每个软件生成名称、描述、安装命令
-4. 软件间用空行分隔
+1. 按分类分组软件，每个分类输出一级 `### 分类名`
+2. 软件名加粗成 `**名称**`，紧跟描述与安装命令代码块
+3. 安装命令按类型映射：`winget install ID` / `brew install --cask 包名` / `mas install ID` / `brew install 包名` / `> Manual install: 链接`
+4. 软件之间用空行分隔
 
-#### 5.3.2 README更新策略
-文件: `readme_updater.py` 中的 `update_readme()` 函数
+#### 5.3.2 README 生成合同
+文件: `readme_updater.py` 中的 `render_sections()` 与 `update_readme()` 函数
 
-**更新逻辑**:
-1. 读取现有 README.md
-2. 查找 `## Windows` 和 `## Mac` 部分
-3. 用新生成的内容替换这些部分
-4. 保留其他内容
+**边界**:
+- **生成区**：`## Windows` 起、至首个 `---` 分隔线之前，内含两个平台段
+- **手写区**：`## Windows` 以上的开场语，与 `---` 起的页脚——原样保留，不受生成影响
+
+**渲染顺序**:
+1. `## Windows` + Windows 清单
+2. `## Mac` + 前置依赖说明（清单含 mas 条目时输出 `brew install mas`）
+3. Mac 清单
+
+**约束**:
+- 生成区内手改会在下次运行被覆盖，内容改动一律落到清单文件
+- 结构标记缺失时按同一骨架补齐；重复运行输出不变（幂等）
+- 开场语里的安装引导属手写区，不随清单增删
 
 ### 5.4 macOS智能接管系统
 
@@ -202,26 +216,21 @@ brew "wget"
 ### 5.5 跨平台一致性设计
 
 #### 5.5.1 分类一致性
-```
-Windows 和 macOS 使用相同的分类结构：
+两侧使用相同的四个分类，README 标题均为纯英文：
 
-平台      分类名称
-Windows  OS Enhancements
-macOS    ⚙️ OS Enhancements
+| Windows | macOS |
+|---|---|
+| OS Enhancements | OS Enhancements |
+| File & Software Management | File & Software Management |
+| Daily Use | Daily Use |
+| Production Tools | Production Tools |
 
-Windows  File & Software Management
-macOS    📁 File & Software Management
-
-Windows  Daily Use
-macOS    🌴 Daily Use
-
-Windows  Production Tools
-macOS    ⚔️ Production Tools
-
-注：macOS 分类使用 emoji 前缀增强可读性，但核心分类名称相同。
-```
+Brewfile 分隔线注释带 emoji（`⚙️` / `📁` / `🌴` / `⚔️`），仅作人眼标记；解析时被剥除，
+不会进入 README 标题，分类匹配也不依赖 emoji。
 
 #### 5.5.2 安装命令标准化
+两侧的软件数量不追求相等——按平台可得性取舍（如 Everything、QuickLook 只在 Windows 侧），
+但同一软件在两侧的命令形式保持同一套映射：
 ```
 平台      类型        命令格式
 Windows  winget      winget install [ID]
@@ -240,13 +249,13 @@ macOS    brew        brew install [name]
 ```powershell
 $AppList = @(
     # 分类标题
-    @{Type="Title";Name="OS Enhancements"}
+    @{ Type="Title"; Name="OS Enhancements" }
 
     # Winget软件
-    @{Type="Winget";Id="Eassos.DiskGenius";Name="DiskGenius (Disk Recovery)"}
+    @{ Type="Winget"; Id="Eassos.DiskGenius"; Name="DiskGenius"; Desc="Disk management and recovery tool." }
 
     # 手动安装软件
-    @{Type="Manual";Name="Resilio Sync";Link="https://...";Desc="P2P sync tool"}
+    @{ Type="Manual"; Name="Resilio Sync"; Link="https://..."; Desc="P2P sync tool" }
 )
 ```
 
