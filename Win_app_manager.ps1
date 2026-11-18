@@ -36,7 +36,6 @@ $AppList = @(
     @{ Type="Winget"; Id="Google.GoogleDrive"; Name="Google Drive"; Desc="Cloud drive and sync tool." },
     @{ Type="Manual"; Link="https://www.resilio.com/sync/"; Name="Resilio Sync"; Desc="P2P sync tool, no cloud storage." },
     @{ Type="Winget"; Id="7zip.7zip"; Name="7-Zip"; Desc="File compression and extraction tool." },
-    @{ Type="Winget"; Id="TGRMNSoftware.BulkRenameUtility"; Name="Bulk Rename Utility"; Desc="Powerful rename tool that can handle almost any batch renaming requirement." },
     @{ Type="Winget"; Id="SoftDeluxe.FreeDownloadManager"; Name="Free Download Manager"; Desc="Download manager tool." },
 
     # ==========================================

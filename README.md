@@ -76,14 +76,6 @@ File compression and extraction tool.
 winget install 7zip.7zip
 ```
 
-**Bulk Rename Utility**
-
-Powerful rename tool that can handle almost any batch renaming requirement.
-
-```powershell
-winget install TGRMNSoftware.BulkRenameUtility
-```
-
 **Free Download Manager**
 
 Download manager tool.
@@ -222,6 +214,12 @@ Collage tool for quickly creating photo walls and mood boards. Free version has 
 
 
 ## Mac
+
+App Store entries install through `mas`; install the CLI once:
+
+```bash
+brew install mas
+```
 
 ### OS Enhancements
 
